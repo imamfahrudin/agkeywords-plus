@@ -850,14 +850,14 @@ window.onload = function () {
                     type: "text",
                     text: `Generate a title based on the main image context using a descriptive format: Action/Event, Subject, Location, Content Type, Environment, Viewpoint, and Concept for SEO. The title must be strictly ${titleMin.value}-${titleMax.value} characters long, including spaces, but never exceed 200 characters. No exceptions. ${conceptC}
           
-          Generate a 150-character description that concisely explains the image's story. The description must end with a period (.).
+          Generate a 150-character description that concisely explains the image's story. CRITICAL: The description MUST ALWAYS end with a period (.) - no exceptions.
           
-          Extract 99 keywords (prioritize 2-word phrases, 1-2 words each, avoiding conjunctions like 'and', 'or', 'but') relevant to the title:
+          Extract 99 keywords (2 words each, no single words allowed, avoiding conjunctions like 'and', 'or', 'but') relevant to the title:
           - 70% must be SEO-friendly.  
           - 30% must be common words.  
           Clearly separate these two groups.  
           
-          Identify 5 main subject phrases (prioritize 2-word phrases, 1-2 words each, avoiding conjunctions like 'and', 'or', 'but') and prioritize their order in the title.  
+          Identify 5 main subject phrases (2 words each, no single words allowed, avoiding conjunctions like 'and', 'or', 'but') and prioritize their order in the title.  
           
           Use the concept '${fileName}' as a 30% reference for relevance.  
           
@@ -1086,14 +1086,14 @@ window.onload = function () {
                     type: "text",
                     text: `Generate a title based on the main image context using a descriptive format: Action/Event, Subject, Location, Content Type, Environment, Viewpoint, and Concept for SEO. The title must be strictly ${titleMin.value}-${titleMax.value} characters long, including spaces, but never exceed 200 characters. No exceptions. ${conceptC}
           
-          Generate a 150-character description that concisely explains the image's story. The description must end with a period (.).
+          Generate a 150-character description that concisely explains the image's story. CRITICAL: The description MUST ALWAYS end with a period (.) - no exceptions.
           
-          Extract 99 keywords (prioritize 2-word phrases, avoiding single words when possible) relevant to the title:  
+          Extract 99 keywords (2 words each, no single words allowed) relevant to the title:  
           - 70% must be SEO-friendly.  
           - 30% must be common words.  
           Clearly separate these two groups.  
           
-          Identify 5 main subject phrases (prioritize 2-word phrases, 1-2 words each) and prioritize their order in the title.  
+          Identify 5 main subject phrases (2 words each, no single words allowed) and prioritize their order in the title.  
           
           Use the concept '${fileName}' as a 30% reference for relevance.  
           
