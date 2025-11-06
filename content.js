@@ -504,7 +504,7 @@ window.onload = function () {
     const message = document.createElement("p");
     message.style.marginTop = "20px";
     message.textContent =
-      "Hello everyone! If you're using the AGKeywords extension, I'm the developer. Please support my coffee! Thank you for your support! ☕";
+      "Hello everyone! If you're using the AGKeywords Plus extension, I'm the developer. Please support my coffee! Thank you for your support! ☕";
     message.style.fontSize = "14px";
     message.style.textAlign = "center";
     message.style.margin = "10px 0";
@@ -852,12 +852,12 @@ window.onload = function () {
           
           Generate a 150-character description that concisely explains the image's story.  
           
-          Extract 99 single-word keywords relevant to the title:  
+          Extract 99 keywords (1-2 words each) relevant to the title:  
           - 70% must be SEO-friendly.  
           - 30% must be common words.  
           Clearly separate these two groups.  
           
-          Identify 5 main subject words and prioritize their order in the title.  
+          Identify 5 main subject phrases (1-2 words each) and prioritize their order in the title.  
           
           Use the concept '${fileName}' as a 30% reference for relevance.  
           
@@ -1093,7 +1093,7 @@ window.onload = function () {
           - 30% must be common words.  
           Clearly separate these two groups.  
           
-          Identify 5 main subject words and prioritize their order in the title.  
+          Identify 5 main subject phrases (1-2 words each) and prioritize their order in the title.  
           
           Use the concept '${fileName}' as a 30% reference for relevance.  
           
@@ -1403,7 +1403,7 @@ No additional text, symbols, or explanations should be included.  `,
     ThisIsAnIcon:"single-icon" | "multi-icon" | "not-icon"
     categoryId:"id" (Use '1.Adobe-Category' dataset: [{"id":1,"name":"Animals"},{"id":2,"name":"Architecture"},{"id":3,"name":"Business"},{"id":4,"name":"Drinks"},{"id":5,"name":"Nature"},{"id":6,"name":"Emotions"},{"id":7,"name":"Food"},{"id":8,"name":"Graphic"},{"id":9,"name":"Hobbies"},{"id":10,"name":"Industry"},{"id":11,"name":"Landscape"},{"id":12,"name":"Lifestyle"},{"id":13,"name":"People"},{"id":14,"name":"Plants"},{"id":15,"name":"Culture"},{"id":16,"name":"Science"},{"id":17,"name":"Social Issues"},{"id":18,"name":"Sports"},{"id":19,"name":"Technology"},{"id":20,"name":"Transport"},{"id":21,"name":"Travel"}])
     fileTypeId:"id" (Reference '1.Adobe-File type' dataset: [{"id":1,"name":"Photos"},{"id":2,"name":"Illustrations"}])`;
-        const promptText = `Ensure title is between ${titleMin.value}-${titleMax.value} characters ${conceptC} contains no image headings whatsoever. main-subject-words 5 keywords and generate 90 keywords. using single words most relevant to the results of the title 70% are SEO-friendly and 30% are common words. Split the output into two groups clearly sort priority of title use concept "${fileName}" as 30% reference and excludes any copyrighted terms Generate only english contain only correctly spelled words with SEO exclude any brand names, trademarks, copyrighted terms, genericized trademark, or specific commercial products. Please respond strictly in the following format, without any additional text or symbols`;
+        const promptText = `Ensure title is between ${titleMin.value}-${titleMax.value} characters ${conceptC} contains no image headings whatsoever. main-subject-words 5 phrases (1-2 words each) and generate 90 keywords. using 1-2 word phrases most relevant to the results of the title 70% are SEO-friendly and 30% are common words. Split the output into two groups clearly sort priority of title use concept "${fileName}" as 30% reference and excludes any copyrighted terms Generate only english contain only correctly spelled words with SEO exclude any brand names, trademarks, copyrighted terms, genericized trademark, or specific commercial products. Please respond strictly in the following format, without any additional text or symbols`;
         const contents = [
           {
             role: "user",
@@ -1567,7 +1567,7 @@ No additional text, symbols, or explanations should be included.  `,
             ...mainsubjectwords
               .split(",")
               .map((item) => item.trim())
-              .flatMap((item) => item.split(" ")), // แยกคำตาม space
+              .filter(Boolean), // keep phrases
             ...sortedKeywords,
           ]),
         ];
@@ -1783,7 +1783,7 @@ No additional text, symbols, or explanations should be included.  `,
     categoryId:"id" (Use '1.Adobe-Category' dataset: [{"id":1,"name":"Animals"},{"id":2,"name":"Architecture"},{"id":3,"name":"Business"},{"id":4,"name":"Drinks"},{"id":5,"name":"Nature"},{"id":6,"name":"Emotions"},{"id":7,"name":"Food"},{"id":8,"name":"Graphic"},{"id":9,"name":"Hobbies"},{"id":10,"name":"Industry"},{"id":11,"name":"Landscape"},{"id":12,"name":"Lifestyle"},{"id":13,"name":"People"},{"id":14,"name":"Plants"},{"id":15,"name":"Culture"},{"id":16,"name":"Science"},{"id":17,"name":"Social Issues"},{"id":18,"name":"Sports"},{"id":19,"name":"Technology"},{"id":20,"name":"Transport"},{"id":21,"name":"Travel"}])
     fileTypeId:"id" (Reference '1.Adobe-File type' dataset: [{"id":1,"name":"Photos"},{"id":2,"name":"Illustrations"}])`;
        const promptText = `Ensure title is between ${titleMin.value}-${titleMax.value} characters for EDITORIAL USE ONLY. This is editorial content: keep real-world logos, brand names, symbols, trademarks, copyrighted/proprietary terms, and specific commercial products exactly as they appear; do not remove, obscure, or alter them. Do not include image headings.
-main-subject-words 5 keywords and generate 90 keywords using single words most relevant to the title; 70% must be SEO-friendly and 30% common words. If any logos, brand names, trademarks, copyrighted terms, or specific commercial products are visible in ${conceptC}, include their exact names among the keywords (factual, non-promotional, no inventions). If none are visible, do not add any such terms.
+main-subject-words 5 phrases (1-2 words each) and generate 90 keywords using 1-2 word phrases most relevant to the title; 70% must be SEO-friendly and 30% common words. If any logos, brand names, trademarks, copyrighted terms, or specific commercial products are visible in ${conceptC}, include their exact names among the keywords (factual, non-promotional, no inventions). If none are visible, do not add any such terms.
 Split the output into two groups and clearly sort by priority of title. Use concept "${fileName}" as 30% reference.
 Generate only English, with correctly spelled words and SEO-aware phrasing. Please respond strictly in the following format, without any additional text or symbols`;
 
@@ -1950,7 +1950,7 @@ Generate only English, with correctly spelled words and SEO-aware phrasing. Plea
             ...mainsubjectwords
               .split(",")
               .map((item) => item.trim())
-              .flatMap((item) => item.split(" ")), // แยกคำตาม space
+              .filter(Boolean), // keep phrases
             ...sortedKeywords,
           ]),
         ];

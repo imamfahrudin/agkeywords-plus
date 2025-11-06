@@ -1,7 +1,7 @@
-# AI Coding Guidelines for AGKeywords Extension
+# AI Coding Guidelines for AGKeywords Plus Extension
 
 ## Project Overview
-AGKeywords is a Chrome extension (Manifest V3) that automates title and keyword generation for Adobe Stock contributor uploads using Google Gemini AI. The extension injects UI controls and processes images to generate SEO-optimized content.
+AGKeywords Plus is a Chrome extension (Manifest V3) that automates title and keyword generation for Adobe Stock contributor uploads using Google Gemini AI. The extension injects UI controls and processes images to generate SEO-optimized content.
 
 ## Architecture
 - **Background Script** (`background.js`): Handles extension icon clicks, redirects to Adobe Stock uploads page
