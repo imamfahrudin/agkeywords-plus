@@ -1,0 +1,29 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "48": "icons/icon48.png"
+      },
+      "default_title": "Auto Prompt"
+   },
+   "background": {
+      "service_worker": "dist/background.bundle.js"
+   },
+   "content_scripts": [ {
+      "js": [ "sortable.min.js", "dist/content.bundle.js" ],
+      "matches": [ "https://contributor.stock.adobe.com/*/uploads*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "สำหรับใส่ Title + Keywords ใน Adobe Stock",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1yaS05sZ5nHPT7/kjpibQug5hk8NrX7XtKbhLhM5Bba7h/u7jhSSr6LUCavI6g6DyiDmulIf6KTNrZeVG7qnDTl+Z6JTDoB5HvmXeoPhXSLBVlubySbjNZVysOEHoLGYP3OtHfyPqlBSi+JaH2YEOr9JKmPmB5ZcNXBJYJ85JPRQKsVY0q/1ZlCUBMEy9c/YOnDEUaAVAvuyR1coxwF8BYXZa7JsMWwiuHzcrbT0/ttBaVxC7GkFcSESVOw18l2jixCzQyLDJsFl4bzJ6vjhssQx6nvhwJcGVPt0ZrsMq/FPc2wJYCLA9HGsWWnpWRm0Ul0IIoWuCUGxghbI0kE75wIDAQAB",
+   "manifest_version": 3,
+   "name": "AGKeywords - Title + Keywords for Adobe Stock",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.1"
+}
