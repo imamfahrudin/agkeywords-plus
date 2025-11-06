@@ -852,12 +852,12 @@ window.onload = function () {
           
           Generate a 150-character description that concisely explains the image's story. The description must end with a period (.).
           
-          Extract 99 keywords (1-2 words each, avoiding conjunctions like 'and', 'or', 'but') relevant to the title:
+          Extract 99 keywords (prioritize 2-word phrases, 1-2 words each, avoiding conjunctions like 'and', 'or', 'but') relevant to the title:
           - 70% must be SEO-friendly.  
           - 30% must be common words.  
           Clearly separate these two groups.  
           
-          Identify 5 main subject phrases (1-2 words each, avoiding conjunctions like 'and', 'or', 'but') and prioritize their order in the title.  
+          Identify 5 main subject phrases (prioritize 2-word phrases, 1-2 words each, avoiding conjunctions like 'and', 'or', 'but') and prioritize their order in the title.  
           
           Use the concept '${fileName}' as a 30% reference for relevance.  
           
@@ -1088,12 +1088,12 @@ window.onload = function () {
           
           Generate a 150-character description that concisely explains the image's story. The description must end with a period (.).
           
-          Extract 99 single-word keywords relevant to the title:  
+          Extract 99 keywords (prioritize 2-word phrases, avoiding single words when possible) relevant to the title:  
           - 70% must be SEO-friendly.  
           - 30% must be common words.  
           Clearly separate these two groups.  
           
-          Identify 5 main subject phrases (1-2 words each) and prioritize their order in the title.  
+          Identify 5 main subject phrases (prioritize 2-word phrases, 1-2 words each) and prioritize their order in the title.  
           
           Use the concept '${fileName}' as a 30% reference for relevance.  
           
