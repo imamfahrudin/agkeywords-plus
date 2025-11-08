@@ -26,7 +26,7 @@ A Chrome extension (Manifest V3) that automates title and keyword generation for
 ### Setup Steps
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/imamfahrudin/agkeywords-plus.git
    cd agkeywords-plus
    ```
 
