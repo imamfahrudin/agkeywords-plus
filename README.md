@@ -2,7 +2,6 @@
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-ISC-green.svg)
-![Chrome Extension](https://img.shields.io/badge/chrome-extension-v3-orange.svg)
 ![Node.js](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)
 
 A Chrome extension (Manifest V3) that automates title and keyword generation for Adobe Stock contributor uploads using Google Gemini AI.
